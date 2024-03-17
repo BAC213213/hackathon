@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post a Question</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label, input, select, button {
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Post a Question</h1>
+    <form id="questionForm">
+      <label for="question">Question:</label>
+      <textarea id="question" name="question" rows="4" required></textarea>
+
+      <label for="department">Department:</label>
+      <select id="department" name="department" required>
+        <option value="">Select Department</option>
+        <option value="sales">Sales</option>
+        <option value="marketing">Marketing</option>
+        <option value="finance">Finance</option>
+        <!-- Add more departments as needed -->
+      </select>
+
+      <button type="button" onclick="postQuestion()">Post Question</button>
+    </form>
+  </div>
+
+  <script>
+    function postQuestion() {
+      var question = document.getElementById("question").value;
+      var department = document.getElementById("department").value;
+
+      // Dummy validation
+      if (question === "" || department === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Dummy submission
+      alert("Question posted successfully!");
+      // You can add logic to send question to server here
+    }
+  </script>
+</body>
+</html>

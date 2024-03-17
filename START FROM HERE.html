@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login or Create Account</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label, input, button {
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to <b>VINQUSOLVE!!</b></h1>
+    <div id="loginSection" class="section">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="loginUsername">Username:</label><br>
+        <input type="text" id="loginUsername" name="loginUsername"><br>
+        <label for="loginPassword">Password:</label><br>
+        <input type="password" id="loginPassword" name="loginPassword"><br><br>
+        
+      </form><button type="button" onclick="location.href='file:///A:/Hackathon/Homepage0005.html'">Login</button>
+    </div>
+
+    <div id="createAccountSection" class="section">
+      <h2>Create Account</h2>
+      <form id="createAccountForm">
+        <label for="createUsername">Username:</label><br>
+        <input type="text" id="createUsername" name="createUsername"><br>
+        <label for="createPassword">Password:</label><br>
+        <input type="password" id="createPassword" name="createPassword"><br><br>
+        <button type="button" onclick="createAccount()">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById("loginUsername").value;
+      var password = document.getElementById("loginPassword").value;
+
+      // Dummy validation
+      if (username === "" || password === "") {
+        alert("Please enter both username and password.");
+        return;
+      }
+
+      // Dummy authentication
+      alert("Login successful! Redirecting to dashboard...");
+      window.location.href = "dashboard.html"; // Redirect to dashboard page
+    }
+
+    function createAccount() {
+      var username = document.getElementById("createUsername").value;
+      var password = document.getElementById("createPassword").value;
+
+      // Dummy validation
+      if (username === "" || password === "") {
+        alert("Please enter both username and password.");
+        return;
+      }
+
+      // Dummy account creation
+      alert("Account created successfully! Redirecting to login...");
+      window.location.href = "login.html"; // Redirect to login page
+    }
+  </script>
+</body>
+</html>

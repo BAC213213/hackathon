@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification Settings</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label, input, select, button {
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .notification-settings {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Notification Settings</h1>
+    <form id="notificationForm">
+      <label for="department">Department:</label>
+      <select id="department" name="department" required>
+        <option value="">Select Department</option>
+        <option value="sales">Sales</option>
+        <option value="marketing">Marketing</option>
+        <option value="finance">Finance</option>
+        <!-- Add more departments as needed -->
+      </select>
+
+      <label for="notification">Turn on Notifications:</label>
+      <input type="checkbox" id="notification" name="notification">
+
+      <div class="notification-settings" style="display: none;">
+        <h2>Notification Settings</h2>
+        <p>Choose how you want to be notified:</p>
+        <input type="checkbox" id="emailNotification" name="emailNotification">
+        <label for="emailNotification">Email Notification</label><br>
+        <input type="checkbox" id="pushNotification" name="pushNotification">
+        <label for="pushNotification">Push Notification</label>
+      </div>
+
+      <button type="button" onclick="saveNotificationSettings()">Save Settings</button>
+    </form>
+  </div>
+
+  <script>
+    function saveNotificationSettings() {
+      var department = document.getElementById("department").value;
+      var notification = document.getElementById("notification").checked;
+      var emailNotification = document.getElementById("emailNotification").checked;
+      var pushNotification = document.getElementById("pushNotification").checked;
+
+      // Dummy validation
+      if (department === "") {
+        alert("Please select your department.");
+        return;
+      }
+
+      // Dummy submission
+      alert("Notification settings saved successfully!");
+      // You can add logic to save notification settings to server here
+    }
+
+    document.getElementById("notification").addEventListener("change", function() {
+      var notificationSettings = document.querySelector(".notification-settings");
+      if (this.checked) {
+        notificationSettings.style.display = "block";
+      } else {
+        notificationSettings.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

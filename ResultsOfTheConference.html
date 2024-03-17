@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conference Results</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  h1 {
+    color: #007bff;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  .congrats {
+    font-size: 24px;
+    color: #28a745;
+    font-weight: bold;
+  }
+
+  .button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Conference Results</h1>
+    <p>Your solution was selected as the best!</p>
+    <p class="congrats">You got 100 VET for your solution. Congrats!!</p>
+    <button class="button" onclick="viewMore()">View More Results</button>
+  </div>
+  <p>The more results will not appear if there are no history of purchase</p> 
+
+  <script>
+    function viewMore() {
+      // Replace this with the logic to navigate to the page with more results
+      alert("Redirecting to view more results...");
+    }
+  
+  </script>
+</body>
+</html>
